@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
-#include <netinet/in.h>
-#include <unistd.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
 #include "iso8583/iso_parser.h"
 #include "core/switch_core.h"
 
@@ -28,13 +28,25 @@ class TcpServer{
 
         cout<<"Server listening on port "<<port<<endl;
 
-        while(true)
-        {
-            int client_sock = accept(serv_fd, nullptr,nullptr);
+       while (true) {
+            int client_socket = accept(server_fd, nullptr, nullptr);
 
-            thread([client_sock]()) 
+            std::thread([client_socket]() {
+                char buffer[1024] = {0};
+                recv(client_socket, buffer, 1024);
+
+                IsoParser parser;
+                SwitchCore core;
+
+                auto request = parser.parse(buffer);
+                auto response = core.handleTransaction(request);
+
+                auto rawResponse = parser.build(response);
+                send(client_socket, rawResponse.c_str(), rawResponse.size(), 0);
+
+                closesocket(client_socket);
+            }).detach();
         }
-
 
     }
 };

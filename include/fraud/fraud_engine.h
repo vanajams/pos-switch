@@ -1,13 +1,18 @@
-#ifndef FRAUD_ENGINE_H
-#define FRAUD_ENGINE_H
+#pragma once
 
 #include<iostream>
-#include "iso_message.h"
-using namespace std;
+#include <vector>
+#include <memory>
+#include <shared_mutex>
+#include "fraud_rule.h"
 
-class fraudEngine{
-    public:
+class FraudEngine {
+private:
+    std::vector<std::unique_ptr<FraudRule>> rules;
+    mutable std::shared_mutex mutex_;
 
-    IsoMessage FraudEngine(const IsoMessage& msg);
+public:
+    void addRule(std::unique_ptr<FraudRule> rule);
+
+    bool checkFraud(const IsoMessage& msg) const;
 };
-#endif

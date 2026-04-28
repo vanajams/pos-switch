@@ -1,5 +1,4 @@
-#ifndef LOGGER_H
-#define LOGGER_H
+#pragma once
 
 #include<iostream>
 
@@ -11,4 +10,3 @@ class Logger{
     Logger(string logMesg, int length){}
 
 };
-#endif

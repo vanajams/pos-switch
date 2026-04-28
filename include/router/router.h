@@ -1,13 +1,9 @@
-#ifndef ROUTER_H
-#define ROUTER_H
+#pragma once
 
-#include<iostream>
-#include "iso_message.h"
+#include <string>
+#include "iso8583/iso_message.h"
 
-using namespace std;
-
-class Router{
-    public:
-    string route(const ISoMessage& msg);
+class Router {
+public:
+    std::string route(const IsoMessage& msg);
 };
-#endif

@@ -1,10 +1,9 @@
-#ifndef SWITCH_CORE_H
-#define SWITCH_CORE_H
+#pragma once
 
 #include<iostream>
-#include "router.h"
-#include "issuer_simulator.h"
-#include "iso_message.h"
+#include "router/router.h"
+#include "issuer/issuer_simulator.h"
+#include "iso8583/iso_message.h"
 
 using namespace std;
 
@@ -16,4 +15,3 @@ class SwitchCore{
     public: 
     IsoMessage handleTransaction(const IsoMessage& request);
 };
-#endif
