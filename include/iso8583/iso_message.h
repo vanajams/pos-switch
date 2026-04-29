@@ -1,20 +1,21 @@
 #pragma once
 
-#include<iostream>
-#include<vector>
-#include<map>
+#include <string>
+#include <unordered_map>
+#include <bitset>
 
+class IsoMessage {
+public:
+    std::string mti;
+    std::bitset<64> bitmap;
+    std::unordered_map<int, std::string> fields;
 
-using namespace std;
+    void setField(int field, const std::string& value) {
+        fields[field] = value;
+        bitmap.set(field - 1);
+    }
 
-
-class IsoMessage{
-   public:
-    string mti;
-    map<int, string> fields;
-
-    
-    void setField(int field, const string& value);
-    string getField(int field) const;
-
+    std::string getField(int field) const {
+        return fields.at(field);
+    }
 };

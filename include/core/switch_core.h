@@ -1,17 +1,16 @@
 #pragma once
 
-#include<iostream>
+#include "iso8583/iso_message.h"
 #include "router/router.h"
 #include "issuer/issuer_simulator.h"
-#include "iso8583/iso_message.h"
+#include "fraud/fraud_engine.h"
 
-using namespace std;
-
-class SwitchCore{
-    private:
+class SwitchCore {
+private:
     Router router;
     IssuerSimulator issuer;
+    FraudEngine fraudEngine;
 
-    public: 
+public:
     IsoMessage handleTransaction(const IsoMessage& request);
 };

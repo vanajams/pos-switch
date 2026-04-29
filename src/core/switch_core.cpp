@@ -1,20 +1,21 @@
-#include <iostream>
 #include "core/switch_core.h"
-#include "fraud/fraud_engine.h"
-
-FraudEngine fraudEngine;
-
-fraudEngine.addRule(std::make_unique<AmountRule>(100000));
-fraudEngine.addRule(std::make_unique<VelocityRule>(5));
 
 IsoMessage SwitchCore::handleTransaction(const IsoMessage& request) {
+
+    // Routing decision
     std::string routeTo = router.route(request);
-    IsoMessage response = issuer.process(request);
-    // (Future: fraud check here)
-     if (fraudEngine.checkFraud(request)) {
+
+    IsoMessage response;
+
+    // Fraud check
+    if (fraudEngine.checkFraud(request)) {
         response.mti = "0210";
-        response.setField(39, "05"); // Decline
-       
+        response.setField(39, "05"); // Declined
+        return response;
     }
+
+    // Process via issuer
+    response = issuer.process(request);
+
     return response;
 }
