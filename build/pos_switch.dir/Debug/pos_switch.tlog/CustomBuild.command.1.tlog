@@ -1,0 +1,10 @@
+^G:\VANAJA_JUNE_2023\AI_PROGRAMS\POS_SWITCH_SIMULATOR\POS-SWITCH\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch -BG:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build --check-stamp-file G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

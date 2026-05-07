@@ -1,4 +1,4 @@
 G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/pos_switch.dir
 G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/pos_client.dir
-G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/edit_cache.dir
-G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/rebuild_cache.dir
+G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/ALL_BUILD.dir
+G:/Vanaja_June_2023/AI_Programs/POS_Switch_Simulator/pos-switch/build/CMakeFiles/ZERO_CHECK.dir

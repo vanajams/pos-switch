@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\concurrency\thread_pool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\core\switch_core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\fraud\fraud_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\gateway\tcp_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\iso8583\field_definitions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\iso8583\iso_message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\iso8583\iso_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\issuer\issuer_simulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\router\router.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\src\utils\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A24CD8BA-E501-3395-B00B-524BD1E4FA22}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

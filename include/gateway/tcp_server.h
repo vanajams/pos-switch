@@ -8,7 +8,11 @@ using namespace std;
 
 class tcpServer{
 
+    private:
+        int port;
     public:
+    
 
-    tcpServer(int p):port(p){}
+    tcpServer(int p):port(p){};
+    void start();
 };

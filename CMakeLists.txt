@@ -10,7 +10,13 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 add_executable(pos_switch ${SOURCES})
 
-add_executable(pos_client scripts/pos_client_simulator.cpp)
+#add_executable(pos_client scripts/pos_client_simulator.cpp)
+add_executable(pos_client
+    scripts/pos_client_simulator.cpp
+    src/iso8583/iso_message.cpp
+    src/iso8583/iso_parser.cpp
+    src/iso8583/field_definitions.cpp
+)
 
 find_package(Threads REQUIRED)
 

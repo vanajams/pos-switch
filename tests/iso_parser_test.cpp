@@ -6,7 +6,7 @@
 #include "core/switch_core.h"
 
 int main() {
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
 
     sockaddr_in serv_addr{};
     serv_addr.sin_family = AF_INET;

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\Vanaja_June_2023\AI_Programs\POS_Switch_Simulator\pos-switch\build\CMakeFiles\5a81156f3e3544074850c26e3f8ee260\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{03073976-1D74-3350-B514-2C69D81D1BC3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

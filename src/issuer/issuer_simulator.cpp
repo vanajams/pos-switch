@@ -1,4 +1,5 @@
 #include "issuer/issuer_simulator.h"
+#include<iostream>
 
 IsoMessage IssuerSimulator::process(const IsoMessage& request) {
     IsoMessage response;
@@ -6,6 +7,8 @@ IsoMessage IssuerSimulator::process(const IsoMessage& request) {
 
     // Simple approval logic
     response.setField(39, "00"); // Approved
+
+    std::cout<<"Response : "<<response.mti <<"  "<<response.bitmap <<std::endl;
 
     return response;
 }
