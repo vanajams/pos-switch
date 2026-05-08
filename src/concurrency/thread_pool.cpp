@@ -30,7 +30,7 @@ ThreadPool::ThreadPool(size_t threadCount) : stop(false) {
         });
     }
 }
-
+/*
 template<typename F, typename... Args>
 auto ThreadPool::submit(F&& f, Args&&... args)
     -> std::future<typename std::invoke_result<F, Args...>::type>
@@ -58,7 +58,7 @@ auto ThreadPool::submit(F&& f, Args&&... args)
     condition.notify_one();
     return result;
 }
-
+*/
 ThreadPool::~ThreadPool() {
     shutdown();
 }

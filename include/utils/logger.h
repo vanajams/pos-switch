@@ -1,12 +1,21 @@
 #pragma once
 
-#include<iostream>
+#include <iostream>
+#include <string>
 
-using namespace std;
+class Logger {
 
-class Logger{
-    public:
+public:
 
-    Logger(string logMesg, int length){}
+    Logger(const std::string& logMsg);
 
+    void info(const std::string& message);
+
+    void error(const std::string& message);
+
+private:
+
+    std::string logMessage;
+
+    int msgLength;
 };
